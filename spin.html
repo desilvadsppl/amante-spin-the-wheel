@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Amante Spin Wheel - Interactive Kiosk Experience">
+    <meta name="Pubuditha Lakshan De Silva" content="Amante">
+    <meta name="theme-color" content="#000000">
+    
+    <title>Amante Spin Wheel - Kiosk</title>
+    
+    <!---------------  Favicon  --------------------->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!---------------  CSS  --------------------->
+    <link rel="stylesheet" href="style.css">
+    
+    <!---------------  Preload Assets for Faster Load  --------------------->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!---------------  Font Awesome  --------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!---------------  Chart.js  --------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+    <!---------------  Chart.js Plugin  --------------------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script> 
+    
+    <!---------------  Prevent Sleep Mode for Kiosk  --------------------->
+    <script>
+        if ('wakeLock' in navigator) {
+            navigator.wakeLock.request('screen');
+        }
+    </script>
+</head>
+
+<body>
+  <!-- Logo Section -->
+  <div class="logo-container">
+    <img src="img/amante_new.png" alt="Game Logo" class="logo">
+  </div>
+  
+  <h1>SPIN & WIN</h1>
+  <div class="container">
+     <div class="wheel_box">
+      <canvas id="spinWheel"></canvas>
+      <button id="spin_btn">Spin</button>
+      <i class="fa-solid fa-location-arrow"></i>
+     </div> 
+    <div id="text"><p></p></div>
+  </div>
+
+  <div class="button-container">
+    <a href="index.html">
+      <button class="home-btn-version">Home</button>
+    </a>
+  </div>
+  <!---------------  SCRIPT  --------------------->
+  <script src="script.js"></script>  
+</body>   
+</html>
